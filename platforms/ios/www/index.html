@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+        <title>Сталкер</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Сталкер 2066</h1>
+
+            <div id="buttons" class="not-show btns-panel form-group col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12"></div>
+
+            <div id="current" class="not-show alert" role="alert">
+                <span id="currentText"></span>
+                <span id="timer" class="pull-right"><strong>00:00</strong></span>
+            </div>
+
+            <div id="quest" class="not-show panel panel-default">
+                <div id="questName" class="panel-heading">Имя квеста</div>
+                <div class="panel-body">
+                    <div id="questDescription" class="quest-description"></div>
+                    <hr>
+                    <div align="center">
+                        <form class="form-inline" name="answerForm">
+                            <input type="text"   class="form-control input-full input-lg"  id="answer" placeholder="Код ответа"/>
+                            <input type="submit" class="btn btn-default btn-lg apply-btn-full" id="accept" value="Применить"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="answerResult" class="not-show alert alert-danger" role="alert"></div>
+
+            <div id="flareGun" class="not-show panel panel-default">
+                <div id="flareGunName" class="panel-heading">Имя квеста</div>
+                <div class="panel-body">
+                    <div id="flareGunDescription"></div>
+                    <hr>
+                    <div class="answer-panel" align="center">
+                        <input type="button" class="btn btn-default input-full btn-lg" id="flareGunAccept" value="Посмотреть результат"/>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result" class="not-show panel panel-default">
+                <div class="panel-heading">Результат</div>
+                <div class="panel-body">
+                    <div class="col-md-6 col-md-offset-4">
+                        <dl class="dl-horizontal">
+                            <dt>Вермя выполнения</dt>
+                            <dd id="time">50 мин</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>Штрафное время</dt>
+                            <dd id="fineTime">30 мин</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>Итого</dt>
+                            <dd id="summary">80 мин</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!--<div id="deviceready" class="blink">
+                <p class="event listening">Загужаетя приложение</p>
+                <p class="event received">Планшет готов</p>
+            </div>-->
+        </div>
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src='js/jquery.min.js'></script>
+        <script type="text/javascript" src='js/bootstrap.min.js'></script>
+        <script type="text/javascript" src="js/lodash.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
